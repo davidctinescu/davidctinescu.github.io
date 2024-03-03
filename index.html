@@ -2,21 +2,22 @@
 <html>
 <head>
   <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <style type="text/css">
     body {
-      background-image: url(bg.webp);
-      background-size: 100px;
+      background: url(bg.webp);
       background-repeat: repeat;
       font-family: 'Courier New', Courier, monospace;
       color: #fff;
+      margin: 0;
+      padding: 0;
     }
     table {
       margin: 0 auto;
       border-collapse: collapse;
-      background-color: none;
+      background-color: transparent;
       border: 2px solid #ffffff;
+      width: 80%;
+      max-width: 800px;
     }
     th, td {
       padding: 10px;
@@ -41,6 +42,8 @@
   </style>
 </head>
 <body>
+  <img id="underconstruction" src="underconstruction.webp" alt="Under Construction">
+
   <table>
     <tr>
       <th colspan="2">about me :D</th>
@@ -50,7 +53,7 @@
         <h1>my beliefs:</h1>
         <ul>
           <li>christian orthodoxy</li>
-          <img src="cross.webp" alt="cross">
+          <li><img src="cross.webp" alt="cross"></li>
         </ul>
       </td>
     </tr>
@@ -70,20 +73,17 @@
     </tr>
   </table>
 
-  <img id="underconstruction" src="underconstruction.webp" alt="Under Construction" class="animate__animated animate__bounceIn">
+  <img id="underconstruction" src="underconstruction.webp" alt="Under Construction">
   
   <script>
-    $(document).ready(function(){
-      $("#underconstruction").addClass("animate__delay-1s");
-      setInterval(displayRomaniaTime, 1000);
-    });
-
     function displayRomaniaTime() {
       var currentTime = new Date();
       var options = { timeZone: 'Europe/Bucharest', hour12: false };
       var romaniaTime = currentTime.toLocaleTimeString('en-US', options);
       document.getElementById('romaniaTime').textContent = 'current time in romania: ' + romaniaTime;
     }
+
+    setInterval(displayRomaniaTime, 1000);
   </script>
 </body>
 </html>
