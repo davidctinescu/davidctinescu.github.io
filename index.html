@@ -1,27 +1,89 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <style type="text/css">
     body {
       background-image: url(bg.webp);
-      background-size: 100px 100px;
+      background-size: 100px;
       background-repeat: repeat;
+      font-family: 'Courier New', Courier, monospace;
+      color: #fff;
     }
-    #underconstruction2 {
-      display: block;
+    table {
       margin: 0 auto;
+      border-collapse: collapse;
+      background-color: none;
+      border: 2px solid #ffffff;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border: none;
+    }
+    th {
+      border: 2px solid #ffffff;
+      font-size: 20px;
+    }
+    td {
+      border-bottom: 1px solid #fff;
     }
     #underconstruction {
       display: block;
-      margin: 0 auto;
-      height: 30px;
+      margin: 20px auto;
+    }
+
+    #romaniaflag {
+      height: 120px;
     }
   </style>
 </head>
 <body>
-  <img id="underconstruction2" src="underconstruction2.webp" alt="Under Construction">
-  <br>
-  <img id="underconstruction" src="underconstruction.webp" alt="Under Construction">
+  <table>
+    <tr>
+      <th colspan="2">about me :D</th>
+    </tr>
+    <tr>
+      <td>
+        <h1>my beliefs:</h1>
+        <ul>
+          <li>christian orthodoxy</li>
+          <img src="cross.webp" alt="cross">
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h1>what's the time in romania?:</h1>
+        <h3 id="romaniaTime">current time: </h3>
+        <img src="romania.webp" alt="romania">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h1>why romania of all countries?:</h1>
+        <h3>because im a true patriot to my country! (also bcz thats where i live)</h3>
+        <img id="romaniaflag" src="romaniaflag.webp" alt="romania">
+      </td>
+    </tr>
+  </table>
+
+  <img id="underconstruction" src="underconstruction.webp" alt="Under Construction" class="animate__animated animate__bounceIn">
+  
+  <script>
+    $(document).ready(function(){
+      $("#underconstruction").addClass("animate__delay-1s");
+      setInterval(displayRomaniaTime, 1000);
+    });
+
+    function displayRomaniaTime() {
+      var currentTime = new Date();
+      var options = { timeZone: 'Europe/Bucharest', hour12: false };
+      var romaniaTime = currentTime.toLocaleTimeString('en-US', options);
+      document.getElementById('romaniaTime').textContent = 'current time in romania: ' + romaniaTime;
+    }
+  </script>
 </body>
 </html>
