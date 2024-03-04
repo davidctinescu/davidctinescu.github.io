@@ -1,21 +1,20 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-  <link rel="icon" type="image/gif" href="favicon.gif">
+  <link rel="shortcut icon" href="favicon.gif" type="image/x-icon">
   <title>HomePage</title>
   <style type="text/css">
     body {
-      background: url(bg.webp);
-      background-repeat: repeat;
-      font-family: 'Courier New', Courier, monospace;
-      color: #fff;
+      background: url(bg.gif);
+      background-size: 200px;
+      color: #ffffff;
       margin: 0;
-      padding: 0;
+      padding: 1px;
     }
     table {
       margin: 0 auto;
       border-collapse: collapse;
-      background-color: transparent;
+      background-image: url(spacebg.gif);
       border: 2px solid #ffffff;
       width: 80%;
       max-width: 800px;
@@ -40,46 +39,83 @@
     #romaniaflag {
       height: 120px;
     }
+
+    a,
+    a:visited {
+      color: blue;
+    }
   </style>
 </head>
 <body>
-  <img id="underconstruction" src="underconstruction.webp" alt="Under Construction">
+  <img id="underconstruction" src="underconstruction.gif" alt="Under Construction">
 
   <table>
     <tr>
-      <th colspan="2"> <h1>about me :D </h2> </th>
+      <th colspan="2"> <h1>welcome to my personal page</h1> </th>
     </tr>
+    <tr>
+      <td colspan="2"> <h2>special thanks to Gen1x for inspiring me to create my own 90slike website</h2> </td>
+    </tr>
+
+    <tr>
+      <td>
+        <h2>
+        i go by dvd, davidctinescu or windowsbuild3r online 
+        <br>
+        i live in romania and i like to code in my free time.
+        </h2>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <h2>
+        i am fascinated by astronomy and theology which i believe to be the mother of all modern science</h2>
+        <img src="world.gif" alt="world">
+        <img src="dove.gif" alt="dove">
+      </td>
+    </tr>
+
     <tr>
       <td>
         <h1>my beliefs:</h1>
-        <h2>christian orthodoxy</h1>
-        <img src="cross.webp" alt="cross">
+        <h2>christian orthodoxy</h2>
+        <img src="cross.gif" alt="cross">
       </td>
     </tr>
     <tr>
       <td>
         <h1>what's the time in romania?:</h1>
         <h3 id="romaniaTime">current time: </h3>
-        <img src="romania.webp" alt="romania">
+        <img src="romania.gif" alt="romania">
       </td>
     </tr>
     <tr>
       <td>
         <h1>why romania of all countries?:</h1>
-        <h3>also bcz thats where i live</h3>
-        <img id="romaniaflag" src="romaniaflag.webp" alt="romania">
+        <h3>bcz thats where i live</h3>
+        <img id="romaniaflag" src="romaniaflag.gif" alt="romania">
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <img src="contact.gif" alt="contact us">
+        <br>
+        <a href="mailto:dconstantinescu77@gmail.com"><h1>email me</h1></a>
+        <a href="https://discord.com/users/908591344379899944"><h1>add me on discord</h1></a>
       </td>
     </tr>
   </table>
 
-  <img id="underconstruction" src="underconstruction.webp" alt="Under Construction">
+  <img id="underconstruction" src="underconstruction.gif" alt="Under Construction">
   
   <script>
     function displayRomaniaTime() {
       var currentTime = new Date();
       var options = { timeZone: 'Europe/Bucharest', hour12: false };
       var romaniaTime = currentTime.toLocaleTimeString('en-US', options);
-      document.getElementById('romaniaTime').textContent = 'current time in romania: ' + romaniaTime + ',gmt +2';
+      document.getElementById('romaniaTime').textContent = 'current time in romania: ' + romaniaTime + ', gmt+2';
     }
 
     setInterval(displayRomaniaTime, 1000);
