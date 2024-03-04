@@ -52,10 +52,8 @@
     <tr>
       <td>
         <h1>my beliefs:</h1>
-        <ul>
-          <li>christian orthodoxy</li>
-          <li><img src="cross.webp" alt="cross"></li>
-        </ul>
+        <h2>christian orthodoxy</h1>
+        <img src="cross.webp" alt="cross">
       </td>
     </tr>
     <tr>
@@ -68,7 +66,7 @@
     <tr>
       <td>
         <h1>why romania of all countries?:</h1>
-        <h3>because im a true patriot to my country! (also bcz thats where i live)</h3>
+        <h3>also bcz thats where i live</h3>
         <img id="romaniaflag" src="romaniaflag.webp" alt="romania">
       </td>
     </tr>
@@ -81,7 +79,7 @@
       var currentTime = new Date();
       var options = { timeZone: 'Europe/Bucharest', hour12: false };
       var romaniaTime = currentTime.toLocaleTimeString('en-US', options);
-      document.getElementById('romaniaTime').textContent = 'current time in romania: ' + romaniaTime;
+      document.getElementById('romaniaTime').textContent = 'current time in romania: ' + romaniaTime + ',gmt +2';
     }
 
     setInterval(displayRomaniaTime, 1000);
